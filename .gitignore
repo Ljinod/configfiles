@@ -6,6 +6,4 @@
 !.vimrc
 !.zshrc
 !.bashrc
-# The templates I modified for the cvim plugin
-!.vim/bundle/cvim/c-support/templates
 !.tmux.conf
