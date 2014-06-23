@@ -123,7 +123,7 @@ set number
 " When the line goes further than 80 characters while editing python/sh/c
 " files then what goes beyond is highlighted.
 augroup longLines
-    autocmd! BufEnter *.py,*.sh,*.c* :match ColorColumn /\%>80v.\+/                      
+    autocmd! BufEnter *.py,*.sh,*.c*,*.wiki :match ColorColumn /\%>80v.\+/                      
 augroup END
 
 " The table of colors, if ever I want to change
