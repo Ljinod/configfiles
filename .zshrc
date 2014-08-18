@@ -61,9 +61,16 @@ alias l='ls -l'
 alias ll='ls -la'     
 alias grep='grep --color=auto' # I want the colors!
 alias ls='ls --color=auto'     # here as well
-alias emacs='emacs -nw'
+#alias emacs='emacs -nw'
 alias tmux="TERM=screen-256color tmux"
 
+
+
+
+###############################################################################
+### PATH
+###############################################################################
+export PATH=/home/julien/Android/android-sdk-linux/platform-tools:$PATH
 
 
 
