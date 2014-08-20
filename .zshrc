@@ -38,17 +38,6 @@ export SYSTEMC=/home/julien/Softs/systemc-2.3.0
 
 
 ###############################################################################
-### TERM
-###############################################################################
-TERM=screen-256color
-
-# If not running interactively, do not do anything
-#  https://wiki.archlinux.org/index.php/Tmux
-[[ $- != *i* ]] && return
-[[ -z "$TMUX" ]] && exec tmux
-
-
-###############################################################################
 ### ALIASES
 ###############################################################################
 alias rm='rm -i'   # to check if I really want to delete that file
@@ -70,7 +59,7 @@ alias tmux="TERM=screen-256color tmux"
 ###############################################################################
 ### PATH
 ###############################################################################
-export PATH=/home/julien/Android/android-sdk-linux/platform-tools:$PATH
+export PATH=/home/julien/Android/android-sdk-linux/platform-tools:/home/julien/\.local/bin:$PATH
 
 
 
@@ -97,20 +86,36 @@ bindkey "^[[3~" delete-char        # key suppress
 ###############################################################################
 ### PROMPTS
 ###############################################################################
+# ------------------  DEPRECATED: USING POWERLINE PROMPT INSTEAD --------------
 # Loading the colors
-autoload -U colors && colors
+# autoload -U colors && colors
+
 # What the left prompt shows:
 # %~: the current directory (inside brackets)
 # %n: the username
-PS1="%{${fg[cyan]}%}-%n-%% %{$reset_color%}"
-RPROMPT="%{${fg[green]}%}[%~]%{$reset_color%}"
+# PS1="%{${fg[cyan]}%}-%n-%% %{$reset_color%}"
+# RPROMPT="%{${fg[green]}%}[%~]%{$reset_color%}"
 # The right prompt shows:
 # %T: the current time with the format 'HH-MM' (24h style)
 # %w: the date following the format 'Day-Number'
-#RPROMPT="%{${fg[green]}%}|%T - %w|%{$reset_color%}" 
+# RPROMPT="%{${fg[green]}%}|%T - %w|%{$reset_color%}" 
 # When an input is needed the prompt will show '> '
-PS2='> '
+# PS2='> '
+# -----------------------------------------------------------------------------
 
+
+###############################################################################
+### POWERLINE-PROMPT
+###############################################################################
+# If there is an error with "powerline-daemon -q" and "powerline-config" here
+# is the fix:
+# copy the files located in ~/.local/bin to the new directory
+# [...]/scripts    (see error message)
+#
+# https://powerline.readthedocs.org/en/latest/installation/linux.html
+export POWERLINE_CONFIG_COMMAND=/home/julien/\.local/bin/
+powerline-daemon -q
+. /home/julien/\.local/lib/python2\.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 
 ###############################################################################
@@ -119,3 +124,16 @@ PS2='> '
 setopt NO_NOTIFY  # no notification of an ending job
 setopt NO_HUP     # don't want to end my jobs when I exit my terminal
 setopt NO_BEEP    # because no beep!
+
+
+
+
+###############################################################################
+### TMUX
+###############################################################################
+TERM=screen-256color
+
+# If not running interactively, do not do anything
+#  https://wiki.archlinux.org/index.php/Tmux
+[[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux

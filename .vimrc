@@ -123,7 +123,7 @@ set number
 " When the line goes further than 80 characters while editing python/sh/c
 " files then what goes beyond is highlighted.
 augroup longLines
-    autocmd! BufEnter *.py,*.sh,*.c*,*.wiki :match ColorColumn /\%>80v.\+/                      
+    autocmd! BufEnter *.py,*.sh,*.c,*.cpp,*.wiki :match ColorColumn /\%>80v.\+/ 
 augroup END
 
 " The table of colors, if ever I want to change
@@ -148,7 +148,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 
 
-
 " #############################################################################
-" ##### POWERLINE 
-let g:Powerline_symbols='fancy'
+" ##### POWERLINE
+" https://powerline.readthedocs.org/en/latest/usage/other.html#vim-statusline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
