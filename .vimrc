@@ -22,7 +22,7 @@ call pathogen#helptags()
 "
 filetype plugin indent on
 syntax on
-set smartindent         " how to have a proper indentation
+set autoindent
 
 
 
