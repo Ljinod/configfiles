@@ -73,11 +73,9 @@ nnoremap <C-l> <C-w>l
 " #############################################################################
 " ##### TABES
 "
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set shiftround
 set expandtab
+set shiftwidth=2
+set tabstop=2
 
 
 
