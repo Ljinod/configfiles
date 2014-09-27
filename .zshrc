@@ -86,36 +86,40 @@ bindkey "^[[3~" delete-char        # key suppress
 ###############################################################################
 ### PROMPTS
 ###############################################################################
-# ------------------  DEPRECATED: USING POWERLINE PROMPT INSTEAD --------------
+autoload -U promptinit
+promptinit
 # Loading the colors
-# autoload -U colors && colors
+autoload -U colors && colors
 
 # What the left prompt shows:
 # %~: the current directory (inside brackets)
 # %n: the username
 # PS1="%{${fg[cyan]}%}-%n-%% %{$reset_color%}"
 # RPROMPT="%{${fg[green]}%}[%~]%{$reset_color%}"
+PS1="%{${fg[cyan]}%}%n - %{$reset_color%}%{${fg[green]}%}[%~]%{$reset_color%}
+%% "
 # The right prompt shows:
 # %T: the current time with the format 'HH-MM' (24h style)
 # %w: the date following the format 'Day-Number'
 # RPROMPT="%{${fg[green]}%}|%T - %w|%{$reset_color%}" 
 # When an input is needed the prompt will show '> '
-# PS2='> '
+PS2='> '
 # -----------------------------------------------------------------------------
 
 
 ###############################################################################
 ### POWERLINE-PROMPT
 ###############################################################################
+# ----------------------------- DEPRECATED ------------------------------------
 # If there is an error with "powerline-daemon -q" and "powerline-config" here
 # is the fix:
 # copy the files located in ~/.local/bin to the new directory
 # [...]/scripts    (see error message)
 #
 # https://powerline.readthedocs.org/en/latest/installation/linux.html
-export POWERLINE_CONFIG_COMMAND=/home/julien/\.local/bin/
-powerline-daemon -q
-. /home/julien/\.local/lib/python2\.7/site-packages/powerline/bindings/zsh/powerline.zsh
+# export POWERLINE_CONFIG_COMMAND=/home/julien/\.local/bin/
+# powerline-daemon -q
+# . /home/julien/\.local/lib/python2\.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 
 ###############################################################################
