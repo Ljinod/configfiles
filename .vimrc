@@ -95,7 +95,8 @@ set noswapfile
 " ##### COLOR SCHEMES
 "
 syntax enable
-set background=dark
+" set background=dark
+set background=light
 let g:solarized_termcolors=256
 let g:solarized_termtrans=0
 let g:solarized_degrade=1
