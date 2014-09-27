@@ -1,9 +1,11 @@
-# IGNORE EVERYTHING
-*
-
-# ...except the config files
+# don't ignore specific files
 !.gitignore
+!.vim/after/ftplugin
 !.vimrc
 !.zshrc
 !.bashrc
 !.tmux.conf
+
+
+# then...IGNORE EVERYTHING
+*
