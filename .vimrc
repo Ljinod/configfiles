@@ -121,13 +121,13 @@ set number
 " http://earthwithsun.com/questions/356863/in-vim-how-i-can-set-a-local-match-only-for-a-specific-filetype
 " When the line goes further than 80 characters while editing python/sh/c
 " files then what goes beyond is highlighted.
-augroup longLines
-    autocmd! BufEnter *.py,*.sh,*.c,*.cpp,*.wiki :match ColorColumn /\%>80v.\+/ 
-augroup END
+" augroup longLines
+"     autocmd! BufEnter *.py,*.sh,*.c,*.cpp,*.wiki :match ColorColumn /\%>80v.\+/ 
+" augroup END
 
 " The table of colors, if ever I want to change
 " http://img1.wikia.nocookie.net/__cb20110121055231/vim/images/1/16/Xterm-color-table.png
-hi ColorColumn ctermbg=39
+" hi ColorColumn ctermbg=39
 
 
 
