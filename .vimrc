@@ -4,17 +4,12 @@
 autocmd! bufwritepost .vimrc source %
 
 
-
 """"""""""""""""""""""""""""""""""""""""""
 """ Pathogen!      
 """"""""""""""""""""""""""""""""""""""""""
 filetype off
 call pathogen#infect()
 call pathogen#helptags()
-
-
-
-
 
 
 " #############################################################################
@@ -25,18 +20,12 @@ syntax on
 set autoindent
 
 
-
-
-
 " #############################################################################
 " ##### BACKSPACE NORMAL BEHAVIOR
 "
 " There is apparently a bug with backspace that is not functionning normally
 " so this option needs to be set like this to prevent this problem.
 set backspace=2
-
-
-
 
 
 " #############################################################################
@@ -46,9 +35,6 @@ set backspace=2
 " way around.
 set pastetoggle=<F2>
 set clipboard=unnamed
-
-
-
 
 
 " #############################################################################
@@ -66,10 +52,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 
-
-
-
-
 " #############################################################################
 " ##### TABES
 "
@@ -78,17 +60,12 @@ set shiftwidth=2
 set tabstop=2
 
 
-
 " #############################################################################
 " ##### NO BACKUP FILES
 "
 set nobackup
 set nowritebackup
 set noswapfile
-
-
-
-
 
 
 " #############################################################################
@@ -108,11 +85,6 @@ let g:solarized_visibility="low"
 colorscheme solarized
 
 
-
-
-
-
-
 " #############################################################################
 " ##### LINE NUMBER AND LENGTH
 " line numbers on 
@@ -130,10 +102,6 @@ set number
 " hi ColorColumn ctermbg=39
 
 
-
-
-
-
 " #############################################################################
 " ##### NERDTREE
 "   https://github.com/scrooloose/nerdtree
@@ -143,8 +111,6 @@ set number
 
 " Automatically closes vim if the only window left is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-
 
 
 " #############################################################################
