@@ -1,0 +1,73 @@
+{
+	"close_windows_when_empty": false,
+	"detect_indentation": false,
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace",
+		"*.aux",
+		"*.dvi",
+		"*.log",
+		"*.out",
+		"*.pdf",
+		"*.zip",
+		"*.sty",
+		"*.sublime-project",
+        "*.bbl",
+        "*.bcf",
+        "*.blg",
+        "*.fdb_latexmk",
+        "*.run.xml",
+        "*.synctex.gz",
+        "*.ttf",
+        "*.otf",
+        "*.eps",
+        "*.pdt"
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS"
+	],
+	"font_size": 10,
+	"ignored_packages":
+	[
+		"Vintage",
+		"Vintage Escape"
+	],
+	"margin": 0,
+	"remember_full_screen": true,
+	"rulers":
+	[
+		80
+	],
+	"show_encoding": false,
+	"show_line_endings": false,
+	"spell_check": false,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"use_tab_stops": false,
+	"vintage_start_in_command_mode": true,
+	"vintageous_use_ctrl_keys": false
+}
