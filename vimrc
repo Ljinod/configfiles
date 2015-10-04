@@ -1,23 +1,48 @@
-""""""""""""""""""""""""""""""""""""""""""
-""" Automatic reloading of .vimrc      
-""""""""""""""""""""""""""""""""""""""""""
+" #############################################################################
+" ##### AUTOMATIC RELOAD OF VIMRC
 autocmd! bufwritepost .vimrc source %
 
 
-""""""""""""""""""""""""""""""""""""""""""
-""" Pathogen!      
-""""""""""""""""""""""""""""""""""""""""""
+" #############################################################################
+" ##### PATHOGEN
 filetype off
-call pathogen#infect()
-call pathogen#helptags()
+execute pathogen#infect()
+
+
+" #############################################################################
+" ##### COLORSCHEME
+colorscheme jellybeans
+let g:jellybeans_use_lowcolor_black = 1
+
+" set background=light
+" colorscheme solarized
+" set background=dark
+" let g:solarized_termcolors=256
+" let g:solarized_termtrans=0
+" let g:solarized_degrade=1
+" let g:solarized_bold=1
+" let g:solarized_underline=1
+" let g:solarized_italic=1
+" let g:solarized_contrast="high"
+" let g:solarized_visibility="low"
+
 
 
 " #############################################################################
 " ##### SYNTAX AND INDENTATION
-"
-filetype plugin indent on
 syntax on
+filetype plugin indent on
 set autoindent
+
+
+" #############################################################################
+" ##### BUFFERS
+" The autowrite option automatically saves the buffer before it is hidden
+set autowriteall
+" When F5 is pressed, a numbered list of file names is printed, and the user
+" needs to type a single number based on the menu and press enter. The menu
+" disappears after choosing the number so it appears only when you need it.
+nnoremap <F5> :buffers<CR>:buffer<Space>
 
 
 " #############################################################################
@@ -56,8 +81,8 @@ nnoremap <C-l> <C-w>l
 " ##### TABES
 "
 set expandtab
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 
 
 " #############################################################################
@@ -66,23 +91,6 @@ set tabstop=2
 set nobackup
 set nowritebackup
 set noswapfile
-
-
-" #############################################################################
-" ##### COLOR SCHEMES
-"
-syntax enable
-" set background=dark
-set background=light
-let g:solarized_termcolors=256
-let g:solarized_termtrans=0
-let g:solarized_degrade=1
-let g:solarized_bold=1
-let g:solarized_underline=1
-let g:solarized_italic=1
-let g:solarized_contrast="high"
-let g:solarized_visibility="low"
-colorscheme solarized
 
 
 " #############################################################################
@@ -97,25 +105,50 @@ set number
 "     autocmd! BufEnter *.py,*.sh,*.c,*.cpp,*.wiki :match ColorColumn /\%>80v.\+/ 
 " augroup END
 
+" Highlight the 80th column on the window
+set colorcolumn=80
 " The table of colors, if ever I want to change
 " http://img1.wikia.nocookie.net/__cb20110121055231/vim/images/1/16/Xterm-color-table.png
-" hi ColorColumn ctermbg=39
+hi ColorColumn ctermbg=16
 
 
 " #############################################################################
 " ##### NERDTREE
 "   https://github.com/scrooloose/nerdtree
 
-" Automatically launching NERDTree with vim
-" autocmd vimenter * NERDTree
+" Automatically launching NERDTree with vim even if no files were specified
+autocmd vimenter * NERDTree
 
 " Automatically closes vim if the only window left is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Asks NERDTree to ignore object files and executables
+let NERDTreeIgnore=['.exe$[[file]]', '.o$[[file]]', '.enc$[[file]]']
+
+
+" #############################################################################
+" ##### NERDTREE-GIT-PLUGIN
+"   https://github.com/Xuyuanp/nerdtree-git-plugin
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
 
 
 " #############################################################################
 " ##### POWERLINE
 " https://powerline.readthedocs.org/en/latest/usage/other.html#vim-statusline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+
+" set rtp+=/home/julien/.local/lib/python2.7/site-packages/powerline/bindings/vim
+
+" python from powerline.vim import setup as powerline_setup
+" python powerline_setup()
+" python del powerline_setup

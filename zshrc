@@ -58,8 +58,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -86,11 +84,11 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# ------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Personal Configuration
-# ------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 
 ###############################################################################
 # ALIASES
@@ -99,20 +97,29 @@ alias rm='rm -i'   # to check if I really want to delete that file
 alias rmf='rm -fv' # force a suppression but show elements deleted
 alias cp='cp -v'   # verbose form of cp
 alias mv='mv -v'   # verbose form of mv
-# If I make this typo I'll have the list of all the files in the current 
+# If I make this typo I'll have the list of all the files in the current
 # folder with their rights
-alias l='ls -l'     
-alias ll='ls -la'     
+alias l='ls -l'
+alias ll='ls -la'
 alias grep='grep --color=auto' # I want the colors!
 alias ls='ls --color=auto'     # here as well
 alias tmux="TERM=screen-256color tmux"
+alias subl='~/.ST2/SublimeText2/sublime_text'
 
+
+###############################################################################
+# EXPORT GLOBAL VARIABLES
+###############################################################################
+export EDITOR=vim
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export MANPATH="/usr/local/man:$MANPATH"
+export GIT_EDITOR=vim
 
 ###############################################################################
 ### KEYBINDINGS
 ###############################################################################
 # There is a problem with the key-bindings in tmux
-if [[ -n $TMUX ]]; 
+if [[ -n $TMUX ]];
 then
     bindkey "^[[4~" end-of-line;
     bindkey "^[[1~" beginning-of-line;
@@ -141,5 +148,5 @@ TERM=screen-256color
 
 # If not running interactively, do not do anything
 #  https://wiki.archlinux.org/index.php/Tmux
-[[ $- != *i* ]] && return
-[[ -z "$TMUX" ]] && exec tmux
+# [[ $- != *i* ]] && return
+# [[ -z "$TMUX" ]] && exec tmux
