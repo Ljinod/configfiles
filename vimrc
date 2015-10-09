@@ -117,7 +117,7 @@ hi ColorColumn ctermbg=16
 "   https://github.com/scrooloose/nerdtree
 
 " Automatically launching NERDTree with vim even if no files were specified
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 
 " Automatically closes vim if the only window left is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
