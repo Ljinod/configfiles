@@ -56,7 +56,7 @@ set backspace=2
 " #############################################################################
 " ##### COPY AND PASTE
 "
-" In order to be able to copy/paste from vim to anything else and the other 
+" In order to be able to copy/paste from vim to anything else and the other
 " way around.
 set pastetoggle=<F2>
 set clipboard=unnamed
@@ -95,14 +95,14 @@ set noswapfile
 
 " #############################################################################
 " ##### LINE NUMBER AND LENGTH
-" line numbers on 
+" line numbers on
 set number
 
 " http://earthwithsun.com/questions/356863/in-vim-how-i-can-set-a-local-match-only-for-a-specific-filetype
 " When the line goes further than 80 characters while editing python/sh/c
 " files then what goes beyond is highlighted.
 " augroup longLines
-"     autocmd! BufEnter *.py,*.sh,*.c,*.cpp,*.wiki :match ColorColumn /\%>80v.\+/ 
+"     autocmd! BufEnter *.py,*.sh,*.c,*.cpp,*.wiki :match ColorColumn /\%>80v.\+/
 " augroup END
 
 " Highlight the 80th column on the window
