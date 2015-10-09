@@ -1,6 +1,6 @@
 " #############################################################################
 " ##### AUTOMATIC RELOAD OF VIMRC
-autocmd! bufwritepost .vimrc source %
+autocmd! bufwritepost ~/.vimrc nested :source ~/.vimrc
 
 
 " #############################################################################
