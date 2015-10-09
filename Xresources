@@ -1,0 +1,40 @@
+! ### MY CUSTOM CONFIGURATION FILE
+
+! Setting explicitly the terminal name
+XTerm*termName: xterm-256color
+
+! Asking to use the locale that I defined so that xterm interprets all the
+! incoming data as being encoded in utf-8
+XTerm*locale: true
+
+! --- Colors! -----------------------------------------------------------------
+! *background: black
+! *foreground: white
+
+XTerm*background: #000000
+XTerm*foreground: #bfbdc0
+
+XTerm*color0: #000000
+XTerm*color1: #8a110e
+XTerm*color2: #669f3d
+XTerm*color3: #b3751e
+XTerm*color4: #493d9f
+XTerm*color5: #9216a3
+XTerm*color6: #198a9c
+XTerm*color7: #bfbdc0
+
+XTerm*color8: #686773
+XTerm*color9: #fc5166
+XTerm*color10: #63ff54
+XTerm*color11: #ffd75c
+XTerm*color12: #766eff
+XTerm*color13: #e151ff
+XTerm*color14: #57ffec
+XTerm*color15: #ffffff
+
+! --- Xft ---------------------------------------------------------------------
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight

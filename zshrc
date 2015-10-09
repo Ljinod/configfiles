@@ -141,7 +141,6 @@ setopt NO_BEEP    # because no beep!
 ###############################################################################
 ### TMUX
 ###############################################################################
-TERM=screen-256color
 
 # If not running interactively, do not do anything
 #  https://wiki.archlinux.org/index.php/Tmux
