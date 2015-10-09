@@ -145,10 +145,19 @@ let g:NERDTreeIndicatorMapCustom = {
 
 " #############################################################################
 " ##### POWERLINE
+" I don't know why - and I'm too tired to find out the reason(s) - but I can't
+" get powerline to work with vim on my ArchLinux. Hence I'm switching to
+" vim-airline.
+" Documentation for powerline can be found here:
 " https://powerline.readthedocs.org/en/latest/usage/other.html#vim-statusline
 
-" set rtp+=/home/julien/.local/lib/python2.7/site-packages/powerline/bindings/vim
-
+" set rtp+=/home/julien/.local/lib/python3.5/site-packages/powerline/bindings/vim
+"
 " python from powerline.vim import setup as powerline_setup
 " python powerline_setup()
 " python del powerline_setup
+
+
+" #############################################################################
+" ##### VIM-AIRLINE
+let g:airline_powerline_fonts = 1
