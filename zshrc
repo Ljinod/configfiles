@@ -97,14 +97,11 @@ alias rm='rm -i'   # to check if I really want to delete that file
 alias rmf='rm -fv' # force a suppression but show elements deleted
 alias cp='cp -v'   # verbose form of cp
 alias mv='mv -v'   # verbose form of mv
-# If I make this typo I'll have the list of all the files in the current
-# folder with their rights
 alias l='ls -l'
 alias ll='ls -la'
 alias grep='grep --color=auto' # I want the colors!
 alias ls='ls --color=auto'     # here as well
 alias tmux="TERM=screen-256color tmux"
-alias subl='~/.ST2/SublimeText2/sublime_text'
 
 
 ###############################################################################
