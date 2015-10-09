@@ -118,8 +118,12 @@ export GIT_EDITOR=vim
 # There is a problem with the key-bindings in tmux
 if [[ -n $TMUX ]];
 then
-    bindkey "^[[4~" end-of-line;
-    bindkey "^[[1~" beginning-of-line;
+    # bindkey "^[[4~" end-of-line;
+    # bindkey "^[[1~" beginning-of-line;
+
+    # Arch Linux values:
+    bindkey "^[[7~" beginning-of-line;
+    bindkey "^[[8~" end-of-line;
 else
     bindkey "^[OF"  end-of-line;        # key end
     bindkey "^[OH"  beginning-of-line   # key beginning
