@@ -14,6 +14,18 @@ new_window none
 # faq.i3wm.org/question/6/how-can-i-set-a-desktop-background-image-in-i3/
 exec --no-startup-id nitrogen --restore
 
+## Enable multimedia keys
+# source:
+# https://faq.i3wm.org/question/125/how-to-change-the-systems-volume/
+
+## Sound keys
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 1%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 1%- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
+
+## Screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
 ###############################################################################
 ## AUTO-CONFIGURATION
