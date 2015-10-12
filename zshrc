@@ -1,10 +1,10 @@
-# ------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Oh my zsh configuration
-# ------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 
-# Path to your oh-my-zsh installation.
+# Path to your oh-my-zsh installation
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -91,26 +91,34 @@ source $ZSH/oh-my-zsh.sh
 # -----------------------------------------------------------------------------
 
 ###############################################################################
+# EXPORT GLOBAL VARIABLES
+###############################################################################
+export EDITOR=vim
+export PATH=$HOME/ArchLinux/els:$HOME/bin:/usr/local/bin:$PATH
+# export MANPATH="/usr/local/man:$MANPATH"
+export GIT_EDITOR=vim
+
+
+###############################################################################
 # ALIASES
 ###############################################################################
 alias rm='rm -i'   # to check if I really want to delete that file
 alias rmf='rm -fv' # force a suppression but show elements deleted
 alias cp='cp -v'   # verbose form of cp
 alias mv='mv -v'   # verbose form of mv
-alias l='ls -l'
-alias ll='ls -la'
+if [ -e $HOME/ArchLinux/els/els ];
+then
+    alias l='els -l --els-icons=fontawesome'
+    alias ll='els -la --els-icons=fontawesome'
+    alias lls='els --els-icons=fontawesome'
+else
+    alias l='ls -l --color=auto'
+    alias ll='ls -al --color=auto'
+fi
 alias grep='grep --color=auto' # I want the colors!
 alias ls='ls --color=auto'     # here as well
 alias tmux="TERM=screen-256color tmux"
 
-
-###############################################################################
-# EXPORT GLOBAL VARIABLES
-###############################################################################
-export EDITOR=vim
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
-export GIT_EDITOR=vim
 
 ###############################################################################
 ### KEYBINDINGS
