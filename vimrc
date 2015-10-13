@@ -171,3 +171,8 @@ let g:NERDTreeIndicatorMapCustom = {
 " #############################################################################
 " ##### VIM-AIRLINE
 let g:airline_powerline_fonts = 1
+
+
+" #############################################################################
+" ##### BUFFERLINE
+let g:bufferline_echo = 0
