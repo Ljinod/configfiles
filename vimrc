@@ -99,12 +99,21 @@ set noswapfile
 set number
 
 
+" #############################################################################
+" ##### HIGHLIGHTNING
+"
 " Highlight the 80th column on the window
 set colorcolumn=80
 " The table of colors, if ever I want to change
 " http://img1.wikia.nocookie.net/__cb20110121055231/vim/images/1/16/Xterm-color-table.png
 hi ColorColumn ctermbg=16
 
+" Highlight the search matches
+" Type < :hi Search > to get all the values that are being used
+set hlsearch
+hi Search ctermbg=LightBlue
+hi Search cterm=none
+hi Search ctermfg=Black
 
 " #############################################################################
 " ##### NERDTREE
