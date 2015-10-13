@@ -27,6 +27,10 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
+
+## Shortcut for lock screen
+bindsym Mod4+p exec i3lock
+
 ###############################################################################
 ## AUTO-CONFIGURATION
 ###############################################################################
