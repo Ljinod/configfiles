@@ -78,7 +78,7 @@ nnoremap <C-l> <C-w>l
 
 
 " #############################################################################
-" ##### TABES
+" ##### TABS
 "
 set expandtab
 set shiftwidth=4
@@ -98,12 +98,6 @@ set noswapfile
 " line numbers on
 set number
 
-" http://earthwithsun.com/questions/356863/in-vim-how-i-can-set-a-local-match-only-for-a-specific-filetype
-" When the line goes further than 80 characters while editing python/sh/c
-" files then what goes beyond is highlighted.
-" augroup longLines
-"     autocmd! BufEnter *.py,*.sh,*.c,*.cpp,*.wiki :match ColorColumn /\%>80v.\+/
-" augroup END
 
 " Highlight the 80th column on the window
 set colorcolumn=80
