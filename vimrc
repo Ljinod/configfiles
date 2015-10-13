@@ -115,6 +115,13 @@ hi Search ctermbg=LightBlue
 hi Search cterm=none
 hi Search ctermfg=Black
 
+
+" #############################################################################
+" ##### SEARCH
+"
+set incsearch
+
+
 " #############################################################################
 " ##### NERDTREE
 "   https://github.com/scrooloose/nerdtree
