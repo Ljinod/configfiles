@@ -49,10 +49,12 @@ xset +fp /usr/share/fonts
 xset +fp /usr/share/fonts/TTF
 xset fp rehash
 
-
 ## Set the keyboard to french, because azerty
 setxkbmap fr
 
+## Start the ssh-agent with the X session: thanks to this the ssh-agent will
+## live with the X session, no need to relaunch it in every terminal
+eval $(ssh-agent)
 
 ## Finally, launch I3!
 exec i3
